@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ivan Lasorsa",
+  "author": "Shayne Parmelee",
   "license": "MIT",
   "dependencies": {
     "react": "^0.14.7",

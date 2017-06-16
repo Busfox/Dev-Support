@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/1.0.0/polaris.min.css">
+  <script src="https://cdn.shopify.com/s/assets/external/app.js"></script>
+  <script type="text/javascript">
+    ShopifyApp.init({
+      apiKey: '<%=@key%>',
+      shopOrigin: 'https://<%=@shop%>'
+    });
+    ShopifyApp.Bar.loadingOff();
+  </script>
+</head>
+
+
+<body>
+  <div>
+    <%= yield %>
+  </div>
+</body>

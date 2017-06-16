@@ -1,9 +1,8 @@
-Bare Sinatra and React app
+Sinatra and React Shopify app
 
 ruby, bundler gem and npm are required dependencies
 
 run:
-- `git clone git@github.com:ilasorsa/bare-sinatra-react.git`
 - `bundle install`
 - `npm install`
 - `webpack`
