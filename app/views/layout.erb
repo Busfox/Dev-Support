@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <head>
-  <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/1.0.0/polaris.min.css">
+  <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/1.1.1/polaris.min.css">
   <script src="https://cdn.shopify.com/s/assets/external/app.js"></script>
   <script type="text/javascript">
     ShopifyApp.init({
-      apiKey: '<%=@key%>',
-      shopOrigin: 'https://<%=@shop%>'
+      apiKey: '5acf7f5851e23826d7ed00ea29c8c7c4',
+      shopOrigin: 'https://da-jinx-in-da-sinx.myshopify.com'
     });
     ShopifyApp.Bar.loadingOff();
   </script>
@@ -16,4 +16,5 @@
   <div>
     <%= yield %>
   </div>
+  <div id='layout'></div>
 </body>

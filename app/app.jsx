@@ -3,41 +3,60 @@ var ReactDOM = require('react-dom');
 import {Page, Card, Button, Layout, FormLayout, TextField, Banner, Heading, ResourceList, TextStyle, DatePicker, Collapsible} from '@shopify/polaris';
 
 ReactDOM.render(
-  <Banner title="App Installed">
-    <p>Time to start notifying people of things!</p>
-  </Banner>,document.getElementById('banner')
-);
-
-
-ReactDOM.render(
-  <Layout>
-    <Layout.AnnotatedSection
-      title="Notification"
-      description="This is the notification that will appear on your storefront"
-    >
-      <Card sectioned>
-        <FormLayout>
-          <TextField label="Text" />
-          <TextField
-            type="email"
-            label="Call to action link"
-          />
-        </FormLayout>
-      </Card>
-    </Layout.AnnotatedSection>
-  </Layout>,
-  document.getElementById('layout')
-);
-
-ReactDOM.render( 
-  <Heading>Schedule a notification</Heading>,
-  document.getElementById('heading')
+  <Heading>Admin APIs</Heading>,
+  document.getElementById('admin-api-heading')
 );
 
 ReactDOM.render(
-    <DatePicker
-      month={5}
-      year={2017}
-    />,
-  document.getElementById('resources2')
+  <ResourceList
+  items={[
+    {
+      url: '/product',
+      attributeOne: 'Product API',
+      badges: [
+        {content: 'GET'},
+        {content: 'PUT'},
+        {content: 'POST'},
+        {content: 'DELETE'},
+      ],
+    },
+    {
+      url: '/order',
+      attributeOne: 'Order API',
+      badges: [
+        {content: 'GET'},
+        {content: 'PUT'},
+        {content: 'POST'},
+        {content: 'DELETE'},
+      ],
+    },
+  ]}
+  renderItem={(item, index) => {
+      return <ResourceList.Item key={index} {...item} />;
+    }}
+/>,
+document.getElementById('admin-api-list')
+);
+
+ReactDOM.render(
+  <Heading>SDKs</Heading>,
+  document.getElementById('sdks-heading')
+);
+
+ReactDOM.render(
+  <ResourceList
+  items={[
+    {
+      url: '/hpsdk',
+      attributeOne: 'Hosted Payment SDK',
+      badges: [
+        {content: 'Private'},
+      ],
+    },
+  ]}
+  renderItem={(item, index) => {
+      return <ResourceList.Item key={index} {...item} />;
+    }}
+/>,
+document.getElementById('sdks-list')
 );

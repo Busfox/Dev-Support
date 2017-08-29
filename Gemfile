@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'sinatra', '~>2.0.0'
+gem 'sinatra'
 gem 'dotenv'
 gem 'httparty'
+gem 'shopify_api'
+gem 'pry'
